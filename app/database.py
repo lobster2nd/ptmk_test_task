@@ -5,10 +5,10 @@ from sqlalchemy.orm import sessionmaker, DeclarativeBase
 from sqlalchemy import create_engine, String, text
 from sqlalchemy.orm import mapped_column
 
-from config import settings
+from config import DATABASE_URL
 
 engine = create_engine(
-    url=settings.DATABASE_URL_psycopg,
+    url=DATABASE_URL,
     echo=True,
 )
 session = sessionmaker(engine)
